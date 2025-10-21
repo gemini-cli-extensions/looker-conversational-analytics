@@ -20,7 +20,7 @@ on:
 
 jobs:
   add-release-notes:
-    if: github.actor == 'renovate[bot]' && startsWith(github.head_ref, 'renovate/googleapis-genai-toolbox')
+    if: github.actor == 'renovate-bot' && startsWith(github.head_ref, 'renovate/googleapis-genai-toolbox')
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -51,7 +51,6 @@ jobs:
 
             // Parse, Filter, and transform
             const prefixesToFilter = ['source/', 'sources/', 'tool/', 'tools/'];
-            
             // Use a map for cleaner type switching
             const typeMap = {
               '##### ⚠ BREAKING CHANGES': 'feat!',
@@ -61,10 +60,8 @@ jobs:
               '##### Miscellaneous Chores': 'ignore',
               '##### Documentation': 'ignore',
             };
-            
             let currentType = 'feat'; // Default
             const newChangelog = [];
-            
             for (const line of releaseNotesSection.split('\n')) {
               const trimmedLine = line.trim();
 
@@ -86,22 +83,19 @@ jobs:
                 const lineAsLowerCase = originalContent.toLowerCase();
 
                 const hasPrefix = prefixesToFilter.some(prefix => lineAsLowerCase.includes(prefix));
-                
                 // Check if the line includes ANY of the required keywords
                 let hasAnyRequiredKeyword = false;
                 if (requiredKeywords.length > 0) {
                   hasAnyRequiredKeyword = requiredKeywords.some(keyword => lineAsLowerCase.includes(keyword));
                 }
-                
                 // Include if it doesn't have a prefix OR it has any of the required keywords
                 if (!hasPrefix || hasAnyRequiredKeyword) {
-                  newChangelog.push(`- ${currentType}: ${originalContent}`);
+                  newChangelog.push(`${currentType}: ${originalContent}`);
                 } else {
                   console.log(`Filtering out: ${originalContent}`);
                 }
               }
             }
-            
             if (newChangelog.length === 0) {
               console.log('Found no changelog items to add after filtering. Exiting.');
               return;
