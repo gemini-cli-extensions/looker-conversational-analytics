@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.1.2...0.1.3) (2025-11-14)
+
+
+### Features
+
+* **tool/looker-generate-embed-url:** Adding generate embed url tool ([#1877](https://redirect.github.com/googleapis/genai-toolbox/issues/1877)) ([ef63860](https://redirect.github.com/googleapis/genai-toolbox/commit/ef63860559798fbad54c1051d9f53bce42d66464)) ([13fda6b](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/13fda6b47ab217e87aa56f22a24c64d5b7b0e4fb))
+* Added prompt support for toolbox ([#1798](https://redirect.github.com/googleapis/genai-toolbox/issues/1798)) ([cd56ea4](https://redirect.github.com/googleapis/genai-toolbox/commit/cd56ea44fbdd149fcb92324e70ee36ac747635db)) ([13fda6b](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/13fda6b47ab217e87aa56f22a24c64d5b7b0e4fb))
+
 ## [0.1.2](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.1.1...0.1.2) (2025-11-09)
 
 
