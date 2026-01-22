@@ -1,6 +1,6 @@
 {
   "name": "looker-conversational-analytics",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Connect to Looker Conversational Analytics",
   "mcpServers": {
     "looker": {
