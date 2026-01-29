@@ -27,7 +27,23 @@ Before you begin, ensure you have the following:
 * [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed with version **+v0.6.0**.
 * Setup Gemini CLI [Authentication](https://github.com/google-gemini/gemini-cli/tree/main?tab=readme-ov-file#-authentication-options).
 * A Looker instance with API access enabled.
+    You will need a Looker Client Id and Client Secret. These can be obtained by following the directions at [Looker API authentication](https://cloud.google.com/looker/docs/api-auth#authentication_with_an_sdk).
+
 * A Google Cloud project with the appropriate APIs enabled.
+    You will need a Google Cloud project with the appropriate APIS enabled. Use the following command to enable those APIs:
+    ```
+    gcloud services enable geminidataanalytics.googleapis.com --project=$PROJECT_ID
+    gcloud services enable cloudaicompanion.googleapis.com --project=$PROJECT_ID
+    ```
+
+    In addition to [setting the ADC for your server][set-adc], you need to ensure the IAM identity has been given the following IAM roles (or corresponding permissions):
+    - `roles/looker.instanceUser`
+    - `roles/cloudaicompanion.user`
+    - `roles/geminidataanalytics.dataAgentStatelessUser`
+
+    To initialize the application default credential run `gcloud auth login --update-adc` in your environment before starting MCP Toolbox.
+
+[set-adc]: https://cloud.google.com/docs/authentication/provide-credentials-adc
 
 
 ## Getting Started
@@ -42,31 +58,28 @@ gemini extensions install https://github.com/gemini-cli-extensions/looker-conver
 
 ### Configuration
 
-You will need a Looker Client Id and Client Secret. These can be obtained by
-following the directions at [Looker API authentication](https://cloud.google.com/looker/docs/api-auth#authentication_with_an_sdk). If you
-don't have access to the Admin pages of the Looker system, you will need to ask
-your administrator to get the Id and Secret for you.
+You will be prompted to configure the following settings during installation. These settings are saved in an `.env` file within the extension's directory.
 
-You will need a Google Cloud project with the appropriate APIS enabled. Use the following command to enable those APIs:
-```
-gcloud services enable geminidataanalytics.googleapis.com --project=$PROJECT_ID
-gcloud services enable cloudaicompanion.googleapis.com --project=$PROJECT_ID
-```
+*   `LOOKER_BASE_URL`: The URL of your Looker instance (e.g. `https://looker.example.com`). You may need to add the port, i.e. `:19999`.
+*   `LOOKER_CLIENT_ID`: Your Looker Client ID.
+*   `LOOKER_CLIENT_SECRET`: Your Looker Client Secret.
+*   `LOOKER_VERIFY_SSL`: (Optional) Whether to verify SSL certificates. Defaults to `true`.
+*   `LOOKER_PROJECT`: The Google Cloud Project ID.
+*   `LOOKER_LOCATION`: The Google Cloud Location ID.
 
-In addition to [setting the ADC for your server][set-adc], you need to ensure
-the IAM identity has been given the following IAM roles (or corresponding
-permissions):
+To view or update your configuration:
 
-- `roles/looker.instanceUser`
-- `roles/cloudaicompanion.user`
-- `roles/geminidataanalytics.dataAgentStatelessUser`
+**List Settings:**
+*   Terminal: `gemini extensions list`
+*   Gemini CLI: `/extensions list`
 
-To initialize the application default credential run `gcloud auth login --update-adc`
-in your environment before starting MCP Toolbox.
+**Update Settings:**
+*   Terminal: `gemini extensions config looker-conversational-analytics [setting name] [--scope <scope>]`
+    *   `setting name`: (Optional) The single setting to configure.
+    *   `scope`: (Optional) The scope of the setting in (`user` or `workspace`). Defaults to `user`.
+*   Currently, you must restart the Gemini CLI for changes to take effect. We recommend using `gemini --resume` to resume your session.
 
-[set-adc]: https://cloud.google.com/docs/authentication/provide-credentials-adc
-
-Set the following environment variables before starting the Gemini CLI. These variables can be loaded from a `.env` file.
+Alternatively, you can manually set these environment variables before starting the Gemini CLI:
 
 ```bash
 export LOOKER_BASE_URL="<your-looker-instance-url>"  # e.g. `https://looker.example.com`. You may need to add the port, i.e. `:19999`.
@@ -76,6 +89,10 @@ export LOOKER_VERIFY_SSL="true" # Optional, defaults to true
 export LOOKER_PROJECT="<your-google-cloud-project-id>"
 export LOOKER_LOCATION="<your-google-cloud-location-id>"
 ```
+
+> [!NOTE]
+> * Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
+> * See [Troubleshooting](#troubleshooting) for debugging your configuration.
 
 ### Start Gemini CLI
 
