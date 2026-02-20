@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.2.0](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.1.9...0.2.0) (2026-02-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update/add detailed telemetry for mcp endpoint compliant with OTEL semantic convention ([#1987](https://redirect.github.com/googleapis/genai-toolbox/issues/1987)) ([478a0bd](https://redirect.github.com/googleapis/genai-toolbox/commit/478a0bdb59288c1213f83862f95a698b4c2c0aab))
+* Update configuration file v2 ([#2369](https://redirect.github.com/googleapis/genai-toolbox/issues/2369))([293c1d6](https://redirect.github.com/googleapis/genai-toolbox/commit/293c1d6889c39807855ba5e01d4c13ba2a4c50ce))
+
+### Features
+
+* **cli/invoke:** Add support for direct tool invocation from CLI ([#2353](https://redirect.github.com/googleapis/genai-toolbox/issues/2353)) ([6e49ba4](https://redirect.github.com/googleapis/genai-toolbox/commit/6e49ba436ef2390c13feaf902b29f5907acffb57)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* **cli/skills:** Add support for generating agent skills from toolset ([#2392](https://redirect.github.com/googleapis/genai-toolbox/issues/2392)) ([80ef346](https://redirect.github.com/googleapis/genai-toolbox/commit/80ef34621453b77bdf6a6016c354f102a17ada04)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* **cloud-logging-admin:** Add source, tools, integration test and docs ([#2137](https://redirect.github.com/googleapis/genai-toolbox/issues/2137)) ([252fc30](https://redirect.github.com/googleapis/genai-toolbox/commit/252fc3091af10d25d8d7af7e047b5ac87a5dd041)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* **cockroachdb:** Add CockroachDB integration with cockroach-go ([#2006](https://redirect.github.com/googleapis/genai-toolbox/issues/2006)) ([1fdd99a](https://redirect.github.com/googleapis/genai-toolbox/commit/1fdd99a9b609a5e906acce414226ff44d75d5975)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* **prebuiltconfigs/alloydb-omni:** Implement Alloydb omni dataplane tools ([#2340](https://redirect.github.com/googleapis/genai-toolbox/issues/2340)) ([e995349](https://redirect.github.com/googleapis/genai-toolbox/commit/e995349ea0756c700d188b8f04e9459121219f0c)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* **server:** Add Tool call error categories ([#2387](https://redirect.github.com/googleapis/genai-toolbox/issues/2387)) ([32cb4db](https://redirect.github.com/googleapis/genai-toolbox/commit/32cb4db712d27579c1bf29e61cbd0bed02286c28)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* **tools/looker:** support `looker-validate-project` tool ([#2430](https://redirect.github.com/googleapis/genai-toolbox/issues/2430)) ([a15a128](https://redirect.github.com/googleapis/genai-toolbox/commit/a15a12873f936b0102aeb9500cc3bcd71bb38c34)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* Update configuration file v2 ([#2369](https://redirect.github.com/googleapis/genai-toolbox/issues/2369))([293c1d6](https://redirect.github.com/googleapis/genai-toolbox/commit/293c1d6889c39807855ba5e01d4c13ba2a4c50ce)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* Update/add detailed telemetry for mcp endpoint compliant with OTEL semantic convention ([#1987](https://redirect.github.com/googleapis/genai-toolbox/issues/1987)) ([478a0bd](https://redirect.github.com/googleapis/genai-toolbox/commit/478a0bdb59288c1213f83862f95a698b4c2c0aab)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+
+
+### Bug Fixes
+
+* **dataplex:** Capture GCP HTTP errors in MCP Toolbox ([#2347](https://redirect.github.com/googleapis/genai-toolbox/issues/2347)) ([1d7c498](https://redirect.github.com/googleapis/genai-toolbox/commit/1d7c4981164c34b4d7bc8edecfd449f57ad11e15)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+* Surface Dataplex API errors in MCP results ([#2347](https://redirect.github.com/googleapis/genai-toolbox/pull/2347))([1d7c498](https://redirect.github.com/googleapis/genai-toolbox/commit/1d7c4981164c34b4d7bc8edecfd449f57ad11e15)) ([96c5cb6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/96c5cb622dc7db60597ee215034d44a9ae86cd40))
+
 ## [0.1.9](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.1.8...0.1.9) (2026-01-28)
 
 
