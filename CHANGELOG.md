@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.2.1...0.2.2) (2026-03-17)
+
+
+### Features
+
+* **deps:** update dependency googleapis/genai-toolbox to v0.29.0 ([#50](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/50)) ([0d8ece9](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/0d8ece996e4322771c8758b38d8ed5bb53f4c4d2))
+
 ## [0.2.1](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.2.0...0.2.1) (2026-03-03)
 
 
