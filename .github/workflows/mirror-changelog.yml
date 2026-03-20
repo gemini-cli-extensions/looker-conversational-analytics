@@ -1,4 +1,3 @@
-# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -51,6 +50,7 @@ jobs:
 
             // Parse, Filter, and transform
             const prefixesToFilter = ['source/', 'sources/', 'tool/', 'tools/'];
+            
             // Use a map for cleaner type switching
             const typeMap = {
               '##### ⚠ BREAKING CHANGES': 'feat!',
@@ -60,8 +60,10 @@ jobs:
               '##### Miscellaneous Chores': 'ignore',
               '##### Documentation': 'ignore',
             };
+            
             let currentType = 'feat'; // Default
             const newChangelog = [];
+            
             for (const line of releaseNotesSection.split('\n')) {
               const trimmedLine = line.trim();
 
@@ -79,15 +81,34 @@ jobs:
               // Match and extract changelog item
               const itemMatch = trimmedLine.match(/^[*-]\s(.*)$/);
               if (itemMatch) {
-                const originalContent = itemMatch[1]; 
-                const lineAsLowerCase = originalContent.toLowerCase();
+                let originalContent = itemMatch[1]; 
 
+                // This is a two-step process to prevent `release-please` from
+                // creating mangled, doubly-nested links for PRs.
+
+                // STEP 1: CLEAN THE INPUT.
+                // The source changelog contains a zero-width space as an HTML entity (`&#8203;`).
+                // This breaks the regex in the next step, so we must remove it first.
+                // E.g., "[#&#8203;1770](...)" becomes "[#1770](...)"
+                originalContent = originalContent.replace(/&#8203;/g, '');
+
+                // STEP 2: PROTECT THE OUTPUT.
+                // `release-please` aggressively tries to auto-link any text that looks like `#1234`.
+                // To prevent this, we insert an invisible Unicode zero-width space (`\u200B`)
+                // between the '#' and the number in the link text. This breaks the parser's
+                // pattern matching without changing the visual appearance of the link.
+                // E.g., "[#1770](...)" becomes "[genai-toolbox#​1770](...)"
+                originalContent = originalContent.replace(/\[#(\d+)\](\([^)]+\))/g, '[genai-toolbox#\u200B$1]$2');
+                
+                const lineAsLowerCase = originalContent.toLowerCase();
                 const hasPrefix = prefixesToFilter.some(prefix => lineAsLowerCase.includes(prefix));
+                
                 // Check if the line includes ANY of the required keywords
                 let hasAnyRequiredKeyword = false;
                 if (requiredKeywords.length > 0) {
                   hasAnyRequiredKeyword = requiredKeywords.some(keyword => lineAsLowerCase.includes(keyword));
                 }
+                
                 // Include if it doesn't have a prefix OR it has any of the required keywords
                 if (!hasPrefix || hasAnyRequiredKeyword) {
                   newChangelog.push(`${currentType}: ${originalContent}`);
@@ -96,6 +117,7 @@ jobs:
                 }
               }
             }
+            
             if (newChangelog.length === 0) {
               console.log('Found no changelog items to add after filtering. Exiting.');
               return;
