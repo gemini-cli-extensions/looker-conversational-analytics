@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.2.3](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.2.2...0.2.3) (2026-03-20)
+
+
+### Features
+
+* **cli:** Add migrate subcommand ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2679](https://redirect.github.com/googleapis/genai-toolbox/issues/2679)) ([12171f7](https://redirect.github.com/googleapis/genai-toolbox/commit/12171f7a02bcd34ce647db10abdb79bb2dac7ace)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **cli:** Add serve subcommand ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2550](https://redirect.github.com/googleapis/genai-toolbox/issues/2550)) ([1e2c7c7](https://redirect.github.com/googleapis/genai-toolbox/commit/1e2c7c7804c67bebf5e2ee9b67c6feb6f05292fd)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **skill:** One skill per toolset ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2733](https://redirect.github.com/googleapis/genai-toolbox/issues/2733)) ([5b85c65](https://redirect.github.com/googleapis/genai-toolbox/commit/5b85c65960dba9bfaf4cadca6d44532a153976e1)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **tools/looker:** Support git\_branch tools for looker. ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2718](https://redirect.github.com/googleapis/genai-toolbox/issues/2718)) ([70ed8a0](https://redirect.github.com/googleapis/genai-toolbox/commit/70ed8a0dcb8e654b748a6e3e1c5ef283c26006da)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+
+
+### Bug Fixes
+
+* **ci:** Implement conditional sharding logic in integration tests ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2763](https://redirect.github.com/googleapis/genai-toolbox/issues/2763)) ([1528d7c](https://redirect.github.com/googleapis/genai-toolbox/commit/1528d7c38dfaa30bdecbe59c79ba926fa6d18356)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **cloudloggingadmin:** Increase log injesting time and add auth test ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2772](https://redirect.github.com/googleapis/genai-toolbox/issues/2772)) ([50b4457](https://redirect.github.com/googleapis/genai-toolbox/commit/50b4457095ec4ac881b3b12719da24d35141f65d)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **oracle:** Normalize encoded proxy usernames in go-ora DSN ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2469](https://redirect.github.com/googleapis/genai-toolbox/issues/2469)) ([b1333cd](https://redirect.github.com/googleapis/genai-toolbox/commit/b1333cd27117655f8ab09f222721e14bea74b487)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **postgres:** Update execute-sql tool to avoid multi-statements parameter ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2707](https://redirect.github.com/googleapis/genai-toolbox/issues/2707)) ([58bc772](https://redirect.github.com/googleapis/genai-toolbox/commit/58bc772f882f0d9e00f403e73fbec812dd8a03ac)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **skills:** Improve flag validation and silence unit test output ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2759](https://redirect.github.com/googleapis/genai-toolbox/issues/2759)) ([f3da6aa](https://redirect.github.com/googleapis/genai-toolbox/commit/f3da6aa5e23b609a1ac9ecc098bccea02f2388ab)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+* **test:** Address flaky healthcare integration test run ([#&[#8203](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/8203);2742](https://redirect.github.com/googleapis/genai-toolbox/issues/2742)) ([9590821](https://redirect.github.com/googleapis/genai-toolbox/commit/9590821bc7d86c5cbacd29b21d4f85b427a87db4)) ([03cbce5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/03cbce58f9e1f1bb639558d0fba28f271c3a3964))
+
 ## [0.2.2](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.2.1...0.2.2) (2026-03-17)
 
 
