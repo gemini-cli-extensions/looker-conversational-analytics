@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.2.4...0.2.5) (2026-04-08)
+
+
+### Features
+
+* **deps:** update dependency googleapis/mcp-toolbox to v0.32.0 ([#59](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/59)) ([10d3fa1](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/10d3fa1499a9b2678d114b0c36b7256e2003f468))
+
 ## [0.2.4](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.2.3...0.2.4) (2026-03-27)
 
 
