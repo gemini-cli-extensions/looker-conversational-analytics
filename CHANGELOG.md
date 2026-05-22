@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.2](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.1...0.3.2) (2026-05-22)
+
+
+### Features
+
+* **auth:** Implement MCP auth tool-level scopes validation ([mcp-toolbox#​3049](https://redirect.github.com/googleapis/mcp-toolbox/issues/3049)) ([c528985](https://redirect.github.com/googleapis/mcp-toolbox/commit/c528985149060adb648f85b5486391bd72d6727e)) ([83ddb65](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/83ddb651a560ee2e765b535d02ecb3df98081cf7))
+* **looker:** Propagate client IP from incoming MCP requests to downstream SDK calls ([mcp-toolbox#​3253](https://redirect.github.com/googleapis/mcp-toolbox/issues/3253)) ([75da6c2](https://redirect.github.com/googleapis/mcp-toolbox/commit/75da6c21dd29d7e8e70eac1b747e3946097e7459)) ([83ddb65](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/83ddb651a560ee2e765b535d02ecb3df98081cf7))
+* Setup SQLCommenter and allow client metadata  ([mcp-toolbox#​3064](https://redirect.github.com/googleapis/mcp-toolbox/issues/3064)) ([9f1f9b3](https://redirect.github.com/googleapis/mcp-toolbox/commit/9f1f9b321dcd05cce55dbff1bbaebfc44a4c9907)) ([83ddb65](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/83ddb651a560ee2e765b535d02ecb3df98081cf7))
+
+
+### Bug Fixes
+
+* **auth/generic:** Fix generic auth expiration field and integration with `authRequired` ([mcp-toolbox#​3251](https://redirect.github.com/googleapis/mcp-toolbox/issues/3251)) ([f4d16c0](https://redirect.github.com/googleapis/mcp-toolbox/commit/f4d16c09b12c4d3297a9aedca706c9830382a4e3)) ([83ddb65](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/83ddb651a560ee2e765b535d02ecb3df98081cf7))
+* **tools:** Initialize query result slices to empty array ([mcp-toolbox#​3250](https://redirect.github.com/googleapis/mcp-toolbox/issues/3250)) ([60ddf48](https://redirect.github.com/googleapis/mcp-toolbox/commit/60ddf487468bfd11c7f9346f16a33a8986f89f84)) ([83ddb65](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/83ddb651a560ee2e765b535d02ecb3df98081cf7))
+* **tools/looker:** Return a 401 error to MCP client when Looker returns a 401 ([mcp-toolbox#​3233](https://redirect.github.com/googleapis/mcp-toolbox/issues/3233)) ([4f409a3](https://redirect.github.com/googleapis/mcp-toolbox/commit/4f409a3283d533bddcf4756a1d58c228744b3931)) ([83ddb65](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/83ddb651a560ee2e765b535d02ecb3df98081cf7))
+* **tools/looker:** Strip wrapping quotes from filter values for unquoted parameters ([mcp-toolbox#​3273](https://redirect.github.com/googleapis/mcp-toolbox/issues/3273)) ([1e3de96](https://redirect.github.com/googleapis/mcp-toolbox/commit/1e3de96daa9bc06253d05b0caf63d499878fb70e)) ([83ddb65](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/83ddb651a560ee2e765b535d02ecb3df98081cf7))
+
 ## [0.3.1](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.0...0.3.1) (2026-05-11)
 
 
