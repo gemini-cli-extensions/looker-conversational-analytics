@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.6](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.5...0.3.6) (2026-07-21)
+
+
+### Features
+
+* **arcadedb:** Add arcadedb source and tools ([mcp-toolbox#​2961](https://redirect.github.com/googleapis/mcp-toolbox/issues/2961)) ([351de00](https://redirect.github.com/googleapis/mcp-toolbox/commit/351de00781a08999e735356624370ea1e7414419)) ([5008fd8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/5008fd8fc6ee7b5e627124cd965b1f3f99dfaea0))
+* **cmd/internal,docs:** Add warning log that prebuilt tools are for developer use ([mcp-toolbox#​3451](https://redirect.github.com/googleapis/mcp-toolbox/issues/3451)) ([8cffcef](https://redirect.github.com/googleapis/mcp-toolbox/commit/8cffcef2b109ba913bd63b87a61f75db9e957d2f)) ([5008fd8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/5008fd8fc6ee7b5e627124cd965b1f3f99dfaea0))
+* Add `quotaProject` support for BigQuery and Looker conversational analytics ([mcp-toolbox#​2610](https://redirect.github.com/googleapis/mcp-toolbox/issues/2610)) ([f3e7ca9](https://redirect.github.com/googleapis/mcp-toolbox/commit/f3e7ca9a8f49ce79f5b6fbef23c45a643c4e9d44)) ([5008fd8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/5008fd8fc6ee7b5e627124cd965b1f3f99dfaea0))
+
+
+### Bug Fixes
+
+* **parameters:** Report the offending value in array/map type errors ([mcp-toolbox#​3512](https://redirect.github.com/googleapis/mcp-toolbox/issues/3512)) ([4034d6f](https://redirect.github.com/googleapis/mcp-toolbox/commit/4034d6f7b820962495622dbedc64fea968c14963)) ([5008fd8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/5008fd8fc6ee7b5e627124cd965b1f3f99dfaea0))
+* **parameters:** Return an error instead of panicking on a non-string type field ([mcp-toolbox#​3516](https://redirect.github.com/googleapis/mcp-toolbox/issues/3516)) ([66a0d53](https://redirect.github.com/googleapis/mcp-toolbox/commit/66a0d53b9fd11d6ee90b28ae1c411fc8685ab990)) ([5008fd8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/5008fd8fc6ee7b5e627124cd965b1f3f99dfaea0))
+* **source/looker:** Dynamically resolve public host URL ([mcp-toolbox#​3603](https://redirect.github.com/googleapis/mcp-toolbox/issues/3603)) ([0428afd](https://redirect.github.com/googleapis/mcp-toolbox/commit/0428afd3e75339701a9dedb5199b89a001457349)) ([5008fd8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/5008fd8fc6ee7b5e627124cd965b1f3f99dfaea0))
+* **tool/looker-run-dashboard:** Add support for SQL Runner query tiles ([mcp-toolbox#​3594](https://redirect.github.com/googleapis/mcp-toolbox/issues/3594)) ([0975d0a](https://redirect.github.com/googleapis/mcp-toolbox/commit/0975d0ac8bc5042f51a8b01eb5514d3ea138f145)) ([5008fd8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/5008fd8fc6ee7b5e627124cd965b1f3f99dfaea0))
+
 ## [0.3.5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.4...0.3.5) (2026-07-01)
 
 
