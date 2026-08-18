@@ -26,6 +26,7 @@ Before you begin, ensure you have the following:
 
 * [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed with version **+v0.6.0**.
 * Setup Gemini CLI [Authentication](https://github.com/google-gemini/gemini-cli/tree/main?tab=readme-ov-file#-authentication-options).
+* [Node.js](https://nodejs.org/) (the MCP server runs via `npx`).
 * A Looker instance with API access enabled.
     You will need a Looker Client Id and Client Secret. These can be obtained by following the directions at [Looker API authentication](https://cloud.google.com/looker/docs/api-auth#authentication_with_an_sdk).
 
