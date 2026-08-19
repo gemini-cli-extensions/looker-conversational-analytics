@@ -28,11 +28,6 @@
           "sensitive": true
         },
         {
-          "key": "LOOKER_VERIFY_SSL",
-          "title": "Verify SSL",
-          "description": "(Optional) Boolean to verify SSL certificates"
-        },
-        {
           "key": "LOOKER_PROJECT",
           "title": "Project",
           "description": "The Google Cloud Project ID"
@@ -41,6 +36,11 @@
           "key": "LOOKER_LOCATION",
           "title": "Location",
           "description": "The Google Cloud Location ID"
+        },
+        {
+          "key": "LOOKER_VERIFY_SSL",
+          "title": "Verify SSL",
+          "description": "(Optional) Boolean to verify SSL certificates"
         },
         {
           "key": "LOOKER_SHOW_HIDDEN_MODELS",

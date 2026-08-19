@@ -32,11 +32,6 @@
       "envVar": "LOOKER_CLIENT_SECRET"
     },
     {
-      "name": "Verify SSL",
-      "description": "(Optional) Boolean to verify SSL certificates",
-      "envVar": "LOOKER_VERIFY_SSL"
-    },
-    {
       "name": "Project",
       "description": "The Google Cloud Project ID",
       "envVar": "LOOKER_PROJECT"
@@ -45,6 +40,11 @@
       "name": "Location",
       "description": "The Google Cloud Location ID",
       "envVar": "LOOKER_LOCATION"
+    },
+    {
+      "name": "Verify SSL",
+      "description": "(Optional) Boolean to verify SSL certificates",
+      "envVar": "LOOKER_VERIFY_SSL"
     },
     {
       "name": "Show Hidden Models",

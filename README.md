@@ -91,9 +91,9 @@ The plugin connects to Looker using these settings:
 *   `LOOKER_BASE_URL`: The URL of your Looker instance (e.g. `https://looker.example.com`). You may need to add the port, i.e. `:19999`.
 *   `LOOKER_CLIENT_ID`: Your Looker Client ID.
 *   `LOOKER_CLIENT_SECRET`: Your Looker Client Secret.
-*   `LOOKER_VERIFY_SSL`: (Optional) Whether to verify SSL certificates. Defaults to `true`.
 *   `LOOKER_PROJECT`: The Google Cloud Project ID.
 *   `LOOKER_LOCATION`: The Google Cloud Location ID.
+*   `LOOKER_VERIFY_SSL`: (Optional) Whether to verify SSL certificates. Defaults to `true`.
 
 How you supply them depends on the harness:
 
@@ -105,9 +105,9 @@ How you supply them depends on the harness:
 export LOOKER_BASE_URL="<your-looker-instance-url>"  # e.g. `https://looker.example.com`. You may need to add the port, i.e. `:19999`.
 export LOOKER_CLIENT_ID="<your-looker-client-id>"
 export LOOKER_CLIENT_SECRET="<your-looker-client-secret>"
-export LOOKER_VERIFY_SSL="true" # Optional, defaults to true
 export LOOKER_PROJECT="<your-google-cloud-project-id>"
 export LOOKER_LOCATION="<your-google-cloud-location-id>"
+export LOOKER_VERIFY_SSL="true" # Optional, defaults to true
 ```
 
 > [!NOTE]
