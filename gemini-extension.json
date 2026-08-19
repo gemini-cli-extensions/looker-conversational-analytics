@@ -11,15 +11,7 @@
         "--prebuilt",
         "looker-conversational-analytics",
         "--stdio"
-      ],
-      "env": {
-        "LOOKER_BASE_URL": "${LOOKER_BASE_URL}",
-        "LOOKER_CLIENT_ID": "${LOOKER_CLIENT_ID}",
-        "LOOKER_CLIENT_SECRET": "${LOOKER_CLIENT_SECRET}",
-        "LOOKER_VERIFY_SSL": "${LOOKER_VERIFY_SSL}",
-        "LOOKER_PROJECT": "${LOOKER_PROJECT}",
-        "LOOKER_LOCATION": "${LOOKER_LOCATION}"
-      }
+      ]
     }
   },
   "contextFileName": "LOOKER-CONVERSATIONAL-ANALYTICS.md",
@@ -43,6 +35,16 @@
       "name": "Verify SSL",
       "description": "(Optional) Boolean to verify SSL certificates",
       "envVar": "LOOKER_VERIFY_SSL"
+    },
+    {
+      "name": "Project",
+      "description": "The Google Cloud Project ID",
+      "envVar": "LOOKER_PROJECT"
+    },
+    {
+      "name": "Location",
+      "description": "The Google Cloud Location ID",
+      "envVar": "LOOKER_LOCATION"
     },
     {
       "name": "Show Hidden Models",

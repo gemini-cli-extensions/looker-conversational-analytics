@@ -1,0 +1,12 @@
+{
+  "name": "looker-conversational-analytics",
+  "version": "0.3.7",
+  "description": "Connect to Looker Conversational Analytics",
+  "author": {
+    "name": "Google LLC",
+    "email": "data-cloud-ai-integrations@google.com"
+  },
+  "repository": "https://github.com/gemini-cli-extensions/looker-conversational-analytics",
+  "license": "Apache-2.0",
+  "mcpServers": "./.codex-plugin/.mcp.json"
+}
