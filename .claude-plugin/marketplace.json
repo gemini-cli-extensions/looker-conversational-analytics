@@ -1,0 +1,16 @@
+{
+  "name": "looker-conversational-analytics",
+  "owner": {
+    "name": "Google LLC",
+    "email": "data-cloud-ai-integrations@google.com"
+  },
+  "metadata": {
+    "description": "Connect to Looker Conversational Analytics."
+  },
+  "plugins": [
+    {
+      "name": "looker-conversational-analytics",
+      "source": "./"
+    }
+  ]
+}
