@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.9](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.8...0.3.9) (2026-08-27)
+
+
+### Features
+
+* restore $schema in plugin.json for spec clients ([#98](https://github.com/gemini-cli-extensions/looker-conversational-analytics/issues/98)) ([63bb57a](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/63bb57a09208414c0280c200b8d0f7f13df44362))
+
 ## [0.3.8](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.7...0.3.8) (2026-08-21)
 
 
