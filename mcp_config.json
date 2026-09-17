@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "looker": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@toolbox-sdk/server@1.9.0",
+        "--prebuilt",
+        "looker-conversational-analytics",
+        "--stdio"
+      ]
+    }
+  }
+}

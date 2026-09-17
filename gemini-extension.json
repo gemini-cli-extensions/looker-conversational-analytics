@@ -1,6 +1,6 @@
 {
   "name": "looker-conversational-analytics",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Connect to Looker Conversational Analytics",
   "mcpServers": {
     "looker": {
@@ -11,15 +11,7 @@
         "--prebuilt",
         "looker-conversational-analytics",
         "--stdio"
-      ],
-      "env": {
-        "LOOKER_BASE_URL": "${LOOKER_BASE_URL}",
-        "LOOKER_CLIENT_ID": "${LOOKER_CLIENT_ID}",
-        "LOOKER_CLIENT_SECRET": "${LOOKER_CLIENT_SECRET}",
-        "LOOKER_VERIFY_SSL": "${LOOKER_VERIFY_SSL}",
-        "LOOKER_PROJECT": "${LOOKER_PROJECT}",
-        "LOOKER_LOCATION": "${LOOKER_LOCATION}"
-      }
+      ]
     }
   },
   "contextFileName": "LOOKER-CONVERSATIONAL-ANALYTICS.md",
@@ -38,6 +30,16 @@
       "name": "Client Secret",
       "description": "Client Secret of the Looker API",
       "envVar": "LOOKER_CLIENT_SECRET"
+    },
+    {
+      "name": "Project",
+      "description": "The Google Cloud Project ID",
+      "envVar": "LOOKER_PROJECT"
+    },
+    {
+      "name": "Location",
+      "description": "The Google Cloud Location ID",
+      "envVar": "LOOKER_LOCATION"
     },
     {
       "name": "Verify SSL",
