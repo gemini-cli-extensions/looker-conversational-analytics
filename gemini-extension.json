@@ -1,13 +1,13 @@
 {
   "name": "looker-conversational-analytics",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Connect to Looker Conversational Analytics",
   "mcpServers": {
     "looker": {
       "command": "npx",
       "args": [
         "-y",
-        "@toolbox-sdk/server@1.9.0",
+        "@toolbox-sdk/server@1.11.0",
         "--prebuilt",
         "looker-conversational-analytics",
         "--stdio"
