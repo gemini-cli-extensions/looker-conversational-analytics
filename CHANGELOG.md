@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.3.11](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.10...0.3.11) (2026-10-08)
+
+
+### Features
+
+* **bigquery:** Support authorized views with dataset restrictions ([mcp-toolbox#​2561](https://redirect.github.com/googleapis/mcp-toolbox/issues/2561)) ([441d4e7](https://redirect.github.com/googleapis/mcp-toolbox/commit/441d4e796ae4a7cae7673cb822481e9c63da920c)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **looker:** Include LookML dashboards in get_dashboards tool ([mcp-toolbox#​4216](https://redirect.github.com/googleapis/mcp-toolbox/issues/4216)) ([2fea1b5](https://redirect.github.com/googleapis/mcp-toolbox/commit/2fea1b5430995d882e81819784ace566fd8d15d2)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **prebuiltconfig/bigtable:** Add prebuilt config for bigtable ([mcp-toolbox#​4068](https://redirect.github.com/googleapis/mcp-toolbox/issues/4068)) ([576b9f7](https://redirect.github.com/googleapis/mcp-toolbox/commit/576b9f74f93a7564dcaaf6d6c06d799b8de3fb1d)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **tool/looker:** Add looker-get-explore tool ([mcp-toolbox#​4173](https://redirect.github.com/googleapis/mcp-toolbox/issues/4173)) ([ceb657e](https://redirect.github.com/googleapis/mcp-toolbox/commit/ceb657e0f01851834528d7e2fadbc4790913ce8d)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **tool/looker:** Expose value_format and value_format_name in field metadata ([mcp-toolbox#​4094](https://redirect.github.com/googleapis/mcp-toolbox/issues/4094)) ([4b7a44d](https://redirect.github.com/googleapis/mcp-toolbox/commit/4b7a44d6052137c912a15aea44fed4e826173ce9)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* Support `--defer-source-connect` feature ([mcp-toolbox#​4076](https://redirect.github.com/googleapis/mcp-toolbox/issues/4076)) ([5700630](https://redirect.github.com/googleapis/mcp-toolbox/commit/5700630c132d5e2fc2d38cf3e9ce1f9898bd757d)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+
+
+### Bug Fixes
+
+* **config:** Fix parseEnv inconsistent handling with YAML comments ([mcp-toolbox#​4039](https://redirect.github.com/googleapis/mcp-toolbox/issues/4039)) ([558c5a9](https://redirect.github.com/googleapis/mcp-toolbox/commit/558c5a9d0fc51555321291584fe1a91f60ba75f2)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **datalineage:** Increase timeouts ([69aa2f2](https://redirect.github.com/googleapis/mcp-toolbox/commit/69aa2f259a5ba92d20086e89d4e77e5d1630e1be)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **looker:** Update legacy feature test expectation ([e9c2f42](https://redirect.github.com/googleapis/mcp-toolbox/commit/e9c2f42a397d59230009f180e45cfab24ef72887)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **resources:** Normalize resource-template URI scheme to lowercase ([mcp-toolbox#​4023](https://redirect.github.com/googleapis/mcp-toolbox/issues/4023)) ([2311dc1](https://redirect.github.com/googleapis/mcp-toolbox/commit/2311dc19f36ecc18587186629addae1515da3f93)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* **test/alloydbainl:** Match query value instead of model-chosen alias ([mcp-toolbox#​4125](https://redirect.github.com/googleapis/mcp-toolbox/issues/4125)) ([1b20eae](https://redirect.github.com/googleapis/mcp-toolbox/commit/1b20eaefcc452df0213c7aff1be54ca705de0d39)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+* Revert "feat(sources): connect sources on first use" ([mcp-toolbox#​4137](https://redirect.github.com/googleapis/mcp-toolbox/issues/4137)) ([7fdbef9](https://redirect.github.com/googleapis/mcp-toolbox/commit/7fdbef98233b5cd09764ef3ad290c0026168662d)) ([7c12d9e](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/7c12d9ecac6417457afd2b0c72d8ca22cf98de96))
+
 ## [0.3.10](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.9...0.3.10) (2026-09-18)
 
 
