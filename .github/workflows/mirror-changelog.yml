@@ -15,31 +15,78 @@
 name: Mirror Toolbox Changelog
 
 on:
-  # Fork Renovate PRs need a write token; safe (no PR-code checkout, API-only).
-  pull_request_target: # zizmor: ignore[dangerous-triggers]
-    types: [opened, edited]
+  workflow_run: # zizmor: ignore[dangerous-triggers]
+    workflows: ["Mirror Toolbox Changelog Trigger"]
+    types: [completed]
+
+permissions: {}
 
 jobs:
   add-release-notes:
-    # Renovate groups the npm toolbox update under groupName 'toolbox' (see
-    # renovate.json5), so its branch is renovate/toolbox. Release notes still come
-    # from googleapis/mcp-toolbox (same source repo), so the markers below are unchanged.
-    if: github.actor == 'renovate-bot' && startsWith(github.head_ref, 'renovate/toolbox')
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+      actions: read
 
     steps:
+      - name: Download PR metadata
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: pr-metadata
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: metadata
+
       - name: Add Toolbox Release Notes to PR Body
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         env:
           REQUIRED_KEYWORDS: 'looker'
         with:
           script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            // Read PR number from artifact
+            let prNumber;
+            const metaFile = path.join('metadata', 'pr_number.txt');
+            if (fs.existsSync(metaFile)) {
+              prNumber = parseInt(fs.readFileSync(metaFile, 'utf8').trim(), 10);
+            }
+
+            if (!prNumber && context.payload.workflow_run?.pull_requests?.length > 0) {
+              prNumber = context.payload.workflow_run.pull_requests[0].number;
+            }
+
+            if (!prNumber || isNaN(prNumber)) {
+              console.log('Could not determine PR number. Exiting.');
+              return;
+            }
+
+            console.log(`Processing PR #${prNumber}`);
+
+            // Fetch latest PR data directly from GitHub REST API
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+            });
+
+            // Security guard: verify PR author is renovate-bot and branch starts with renovate/toolbox
+            if (pr.user?.login !== 'renovate-bot' || !pr.head?.ref?.startsWith('renovate/toolbox')) {
+              console.log(`PR #${prNumber} actor (${pr.user?.login}) or branch (${pr.head?.ref}) does not match Renovate toolbox branch. Exiting.`);
+              return;
+            }
+
+            if (pr.state !== 'open') {
+              console.log(`PR #${prNumber} is not open (state: ${pr.state}). Exiting.`);
+              return;
+            }
+
             const requiredKeywordsEnv = process.env.REQUIRED_KEYWORDS;
             const requiredKeywords = requiredKeywordsEnv.split(',').map(kw => kw.trim()).filter(kw => kw.length > 0);
 
-            const prBody = context.payload.pull_request.body || '';
+            const prBody = pr.body || '';
 
             // Extract the relevant changelog section
             const startMarker = '<summary>googleapis/mcp-toolbox';
@@ -148,8 +195,8 @@ jobs:
             await github.rest.pulls.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: context.issue.number,
+              pull_number: prNumber,
               body: finalBody,
             });
 
-            console.log('Successfully updated the PR body with filtered release notes.');
+            console.log(`Successfully updated the PR #${prNumber} body with filtered release notes.`);

@@ -1,0 +1,42 @@
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Mirror Toolbox Changelog Trigger
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+permissions: {}
+
+jobs:
+  trigger:
+    # Renovate groups the npm toolbox update under groupName 'toolbox' (see
+    # renovate.json5), so its branch is renovate/toolbox.
+    if: github.actor == 'renovate-bot' && startsWith(github.head_ref, 'renovate/toolbox')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Save PR metadata
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          mkdir -p metadata
+          echo "$PR_NUMBER" > metadata/pr_number.txt
+
+      - name: Upload PR metadata artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: pr-metadata
+          path: metadata/
+          retention-days: 1
