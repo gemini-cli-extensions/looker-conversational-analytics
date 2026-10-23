@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.3.12](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.11...0.3.12) (2026-10-23)
+
+
+### Features
+
+* **conversational-analytics:** Add create, update, and delete data agent tools ([mcp-toolbox#​3685](https://redirect.github.com/googleapis/mcp-toolbox/issues/3685)) ([aaf8841](https://redirect.github.com/googleapis/mcp-toolbox/commit/aaf88413e117856f80f646da7f1dbc63ebaedea3)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+* **looker:** Support running saved queries by query_id in query tool ([mcp-toolbox#​4220](https://redirect.github.com/googleapis/mcp-toolbox/issues/4220)) ([0f2f3fb](https://redirect.github.com/googleapis/mcp-toolbox/commit/0f2f3fb2f3ee51e2959d028af31b2aabd46d248c)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+* **server:** Backport MCP Apps UI support across v20241105 - v20251125 ([mcp-toolbox#​4057](https://redirect.github.com/googleapis/mcp-toolbox/issues/4057)) ([3a4032c](https://redirect.github.com/googleapis/mcp-toolbox/commit/3a4032cb939798309657dc7dd6050396d77d36ce)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+* **ui:** Add collapsible sidebar and resizable scrollable tool description ([mcp-toolbox#​4281](https://redirect.github.com/googleapis/mcp-toolbox/issues/4281)) ([8d1930f](https://redirect.github.com/googleapis/mcp-toolbox/commit/8d1930fc972a59c03688be19fd577a5f6cbe3abd)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+* **ui:** Add MCP Apps support to toolbox playground ([mcp-toolbox#​4063](https://redirect.github.com/googleapis/mcp-toolbox/issues/4063)) ([d0628f7](https://redirect.github.com/googleapis/mcp-toolbox/commit/d0628f76af4db1443340ed07ff5e7e9e5ae532fa)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+
+
+### Bug Fixes
+
+* **auth/generic:** Validate issuer claim in GetClaimsFromHeader ([mcp-toolbox#​4296](https://redirect.github.com/googleapis/mcp-toolbox/issues/4296)) ([e0d655a](https://redirect.github.com/googleapis/mcp-toolbox/commit/e0d655a223cb6d3334ccf00012ef66675634b552)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+* **telemetry:** Disable self-tracing on GCP telemetry exporters ([mcp-toolbox#​4230](https://redirect.github.com/googleapis/mcp-toolbox/issues/4230)) ([f9ba7e5](https://redirect.github.com/googleapis/mcp-toolbox/commit/f9ba7e52679fb9ef8166510955e9493a63e9440c)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+* **tools:** Remove `Authorized()` from Tool interface to ensure centralized `authRequired` check ([mcp-toolbox#​4254](https://redirect.github.com/googleapis/mcp-toolbox/issues/4254)) ([00ce635](https://redirect.github.com/googleapis/mcp-toolbox/commit/00ce6356a539242ebb94729038efe960c7173387)) ([6f30ad5](https://github.com/gemini-cli-extensions/looker-conversational-analytics/commit/6f30ad5271931d58ea595f0a5903f5751794d9e5))
+
 ## [0.3.11](https://github.com/gemini-cli-extensions/looker-conversational-analytics/compare/0.3.10...0.3.11) (2026-10-08)
 
 
